@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/restaurant/restaurant/settings.py
+sed -i 's/\[]/\["18.201.240.183"]/' /home/ubuntu/restaurant/restaurant/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
