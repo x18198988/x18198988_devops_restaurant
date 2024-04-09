@@ -11,3 +11,4 @@ sudo ln -s /etc/nginx/sites-available/restaurant /etc/nginx/sites-enabled/
 sudo gpasswd -a www-data ubuntu
 sudo systemctl restart nginx
 
+python3 /home/ubuntu/restaurant/manage.py collectstatic --noinput
