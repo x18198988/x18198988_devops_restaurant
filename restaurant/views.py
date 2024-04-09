@@ -80,7 +80,7 @@ def handle_signup(request):
         return HttpResponse("404 error") 
 
 def handle_booking(request):
-    if request.user.is_authenticated == 'POST':
+    if request.method == 'POST':
         if request.method == 'POST':
             name=request.POST.get('name')
             
