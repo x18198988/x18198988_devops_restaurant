@@ -4,7 +4,7 @@ sed -i 's/\[]/\["18.201.240.183"]/' /home/ubuntu/restaurant/restaurant/settings.
 
 python3 manage.py migrate 
 python3 manage.py makemigrations     
-python3 manage.py collectstatic --noinput
+python3 /home/ubuntu/restaurant/manage.py collectstatic --noinput
 sudo service gunicorn restart
 sudo service nginx restart
 #sudo tail -f /var/log/nginx/error.log
