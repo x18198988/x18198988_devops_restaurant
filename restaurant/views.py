@@ -80,14 +80,14 @@ def handle_signup(request):
         return HttpResponse("404 error") 
 
 def handle_booking(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated == 'POST':
         if request.method == 'POST':
             name=request.POST.get('name')
             
             date=request.POST.get('date')
             table=request.POST.get('table')
             sr=request.POST.get('sr')
-            b=Booking(user_id=request.user.pk, name=name, table_id=table, date_time=date, sr=sr)
+            b=Booking(user_id=1, name=name, table_id=table, date_time=date, sr=sr)
             b.save()
             return redirect('index')
         else:
